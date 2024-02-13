@@ -1,314 +1,347 @@
-# Statystyka Opisowa
+## Wybierz prawdziwe stwierdzenia związane z hierarchią Chomsky'ego.
 
-## Statystyka
-Statystyka ma za zadanie w miarę możliwości ==precyzyjnie== wnioskować o populacji na podstawie badania próby
+  
 
+* Każdy język bezkontekstowy jest językiem regularnym.
 
-## Populacja
-==Populacja== jest pojmowana jako zbiór wyników wszystkich pomiarów, którymi badacz jest zainteresowany. Populację nazywa się też ==uniwersum==. 
+* Klasa 3 obejmuje języki regularne reprezentowane przez wyrażania regularne i akceptowane przez automaty skończone.
 
-## Próba
-==Próba== jest podzbiorem wyników pomiarów wybranych z populacji. Pobierania próby dokonuje się z reguły w sposób ==losowy==, tj. w taki sposób, żeby każda możliwa próba złożona z n elementów miała taką samą szansę, że zostanie wybrana. Tak wybraną próbę nazywa się prostą próbą losową lub krócej ==próbą losową==.
+* Klasa 2 obejmuje języki bezkontekstowe reprezentowane przez gramatyki bezkontekstowe i akceptowane przez automaty ze stosem.
 
-## Klasyfikacja danych
+* Klasa 0 obejmuje języki rekurencyjnie przeliczalne generowane przez gramatyki bez ograniczeń i akceptowane przez maszyny Turinga.
 
-```mermaid
-graph LR
-A(Dane) --> B(Jakościowe)
-A-->C(Ilościowe)
-B-->D(Scala Nominalna)
-B-->E(Scala Porządkowa)
-C-->F(Skala Interwałowa)
-C-->G(Skala Ilorazowa)
-D-->H(Podział na kategorie <wyczerpujący i rozłączny>)
-E-->I(Podział na kategorie dające się uporządkować)
-F-->J(Można określić 'odległość' między danymi)
-G-->K(Można określić 'punkt zerowy' skali)
-```
-*rysunek z klasyfikacji danych
+* Hierarchia Chomsky'ego obejmuje 4 klasy języków, każda kolejna klasa o wyższym numerze jest podzbiorem właściwym klasy o niższym numerze.
 
-## Skale pomiarowe
+  
+  
 
-### Skala nominalna 
-Przy ==nominalnej skali pomiarowej== liczby są używane tylko jako etykiety dla grup (klas). Jeżeli zbór danych składa się z obiektów niebieskich, zielonych i czerwonych, możemy oznaczyć obiekty niebieskie numerem 1, zielone numerem 2, a czerwone numerem 3. Cyfry 1, 2 i 3 zastępują tylko nazwę klasy, do której należy obiekt. Nominalną skalę pomiarową stosujemy do wyników obserwacji, które mają charakter raczej jakościowy" niż „ilościowy": do zbioru obiektów niebieskich, zielonych i czerwonych, do zbioru mężczyzn i kobiet, do grup zawodowych, do zbioru obiektów geograficznych, itp.
+## Które z poniższych stwierdzeń są prawdziwe?
 
+  
 
+* Istnieją automaty ze stosem, dla których nie ma równoważnych im deterministycznych automatów ze stosem.
 
-#### Tabela 1. Przykład: Dane jakościowe/skala nominalna 
-Grupa krwi | Liczba pacjentów | Udział % 
--------------|-----------------------|--------
-A | 425 | 39.5%
-B | 180 | 16.7%
-AB | 84 | 7.8%
-0 | 388 | 36%
-Razem | 1077 | 100.0%
+* Istnieją maszyny Turinga, dla których nie ma równoważnych im deterministycznych maszyn Turinga.
 
----
+* Istnieją automaty skończone, dla których nie ma równoważnych im deterministycznych automatów skończonych.
 
-### Skala porządkowa 
-Przy ==porządkowej skali pomiarowej== wyniki obserwacji obiektów mogą być uporządkowane w zależności od ich rozmiarów lub znaczenia. Cztery produkty możemy oceniać za pomocą cyfr 1, 2, 3, 4, gdzie 1 oznacza najlepszy, a 4 najgorszy. Przy takiej skali pomiarowej nie dowiadujemy się niczego o tym, o ile jeden produkt jest lepszy od drugiego, wiemy tylko, że jest lepszy.
+* Istnieją maszyny Turinga, dla których nie ma równoważnych im maszyn Turinga z własnością stopu (rozstrzygających).
 
-#### Tabela 2. Przykład: Dane jakościowe/skala porządkowa
+  
 
-Stan migdałków | Liczba dzieci | Udział % 
--------------|-----------------------|--------
-niepowiększone | 516 | 36.9%
-powiększone | 589 | 42.1%
-bardzo powiększone | 293 | 21.0%
-Razem | 1398 | 100.0%
+## Które z poniższych stwierdzeń są prawdziwe?
 
----
+* Język akceptowany (rozpoznawany) przez maszynę Turinga jest zbiorem tych wszystkich słów, dla których maszyna zatrzymuje się w stanie akceptującym. Słowa nie należące do języka mogą zostać odrzucone (maszyna zatrzyma się w stanie nieakceptującym) lub maszyna zapętli się i w ogóle nie zatrzyma się dla takich słów.
 
-### Skala przedziałowa (interwałowa) 
-Przy ==przedziałowej skali pomiarowej== umiemy przypisać znaczenie różnicy między wynikami obserwacji obiektów. Wyniki obserwacji są umieszczone w pewnym przedziale liczbowym, odległością między obiektami jest różnica między wynikami obserwacji, wyrażona w odpowiednich jednostkach. Na przykład przeciętna wartość indeksu Dow Jones w styczniu 1992 r. wynosiła 3108, a w grudniu 1991 r. 2914. Różnica między styczniem a grudniem wyniosła 94 jednostki. To są liczby ze skali przedziałowej.
+* "Problem stopu" jest przykładem problemu nierozstrzygalnego (nierozwiązywalnego).
 
----
+* Języki rozpoznawane (akceptowane) przez maszynę Turinga nazywamy także językami rekurencyjnymi.
 
-### Skala ilorazowa 
-==Ilorazowa skala pomiarowa== jest **"najmocniejszą"** ze wszystkich skal. W tym przypadku znaczenie ma nie tylko odległość między dwoma obserwowanymi obiektami. Znaczenie możemy przypisać również ilorazom odległości. Na przykład płace mierzymy na skali florazowej. Płaca 50000 $ jest dwa razy większa niż płaca 25 000 $. Podobnego porównania nie możemy zrobić w odniesieniu do temperatury, mierzonej w skali przedziałowej. Nie możemy powiedzieć, że obiekt o temperaturze 50° Celsjusza jest dwa razy cieplejszy od obiektu o temperaturze 25° Celsjusza. Skala ilorazowa musi zawierać naturalne zero. (0° Celsjusza nie jest takim zerem). Odróżnienie skali przedziałowej od ilorazowej nie zawsze jest łatwe.
+* Język rozstrzygalny przez maszynę Turinga jest zbiorem tych wszystkich słów, dla których rozstrzygająca maszyna Turinga (maszyna z własnością stopu) zatrzymuje się w stanie akceptującym.
 
-----
+  
 
-#### Grupowanie danych ilościowych 
-Klasa wydatków ($) | Częstość (liczba klientów) f(x) | Względna częstość f(x)
-------|-----------|--------
-Od 0 do mniej niż 100 | 30 | 0,163
-Od 100 do mniej niż 200 | 38 | 0,207
-Od 200 do mniej niż 300 | 50 | 0.272
-Od 300 do mniej niż 400 | 31 | 0,168 
-Od 400 do mniej niż 500 | 22 | 0,120 
-Od 500 do mniej niż 600 | 13 | 0,070
-- | 184 | 1,000
+## Które z poniższych stwierdzeń są prawdziwe?
 
-Grupę danych, których wartości mieszczą się w granicach jednego z ustalonych przez nas przedziałów, nazywamy ==klasą==.
+* Deterministyczny automat skorńczony charakteryzuje się liniowym czasem obliczeń ze względu na długość analizowanego wejścia (wykonuje dokładnie jeden krok na jeden symbol wejściowy).
 
-## Percentyle, kwartyle, mediana
+* Deterministyczny automat ze stosem może charakteryzować się liniowym czasem obliczeń ze względu na długość analizowanego wejścia (choć nie można powiedzieć, że wykonuje dokładnie jeden krok na jeden symbol wejściowy, jak to ma miejsce w przypadku deterministycznego automatu skończonego).
 
-==P-tym percentylem== w zbiorze liczb (uporządkowanych według wielkości) jest taka wartość, poniżej której znajduje się P% liczb z tego zbioru. Miejsce P-tego percentyla określa wzór: 
-$$
-(n+1)P/100
-$$
- gdzie n jest liczbą elementów zbioru³.
+* Zastąpienie niedeterministycznej maszyny Turinga symulującą ją maszyną deterministyczną nie zostaje okupione żadnym wzrostem złożoności obliczeń.
 
-==Pierwszy kwartyl== to 25-ty percentyl, czyli wartość, poniżej której znajduje się jedna czwarta wyników obserwacji. 
-Podobnie ==drugim kwartylem== jest 50-ty percentyl, który obliczyliśmy w przykładzie: jest to najważniejszy kwartyl, mający specjalną nazwę: mediana. 
+* Zastąpienie niedeterministycznego automatu skończonego równoważnym mu deterministycznym automatem skończonym nie zostaje okupione żadnym wzrostem czasowej złożoności obliczeń.
 
-==Mediana== jest to 50-ty percentyl, czyli wartość, poniżej której znajduje się połowa obserwacji.
+  
 
-==Trzeci kwartyl== to 75-ty percentyl, czyli wartość, poniżej której znajduje się trzy czwarte wyników obserwacji. 
+## Wybierz prawdziwe stwierdzenia:
 
-25-ty percentyl jest często nazywany ==kwartylem dolnym==, 50-ty percentyl, czyli mediana - ==kwartylem środkowym==, a 75-ty percentyl - ==kwartylem górnym==.
+* Teza Churcha - Turinga mówi, że każdy efektywnie rozwiązywalny (obliczalny) problem algorytmiczny jest rozwiązywalny przez maszynę Turinga.
 
-## Miary tendencji centralnej 
-==Dominantą== w zbiorze danych jest ta wartość, która w tym zbiorze występuje najczęściej.
+* Język przekątniowy (język diagonalizacji) jest rozpoznawany przez pewną maszynę Turinga.
 
-==Średnią== zbioru wyników obserwacji, zwaną także ==przeciętną==, jest suma wartości wszystkich wyników podzielona przez liczbę elementów tego zbioru. 
+* Język uniwersalny jest przykładem języka rozpoznawalnego, ale nie rozstrzygalnego.
 
-Miarą tendencji centralnej jest także poznana wcześniej ==mediana==.
+* Problem stopu jest przykładem problemu nierozwiązywalnego.
 
----
+  
+  
 
-**Średnia w próbie:**
-$$
-\overline{x}=\frac{\sum_{i=1}^{n} x_{i}}{n}=\frac{x_1+...+x_n}{n},
-$$
-gdzie $\sum$ jest znakiem sumowania. Sumowanie rozciąga się na wszystkie wyniki obserwacji.
+## Dane są dwa automaty skończone, jak na rysunku. Które z poniższych stwierdzeń są prawdziwe?
 
-**Średnia w populacji:**
-$$
-\mu=\frac{\sum_{i=1}^{N} {}x_i}{N}.
-$$
+  
 
-## Miary rozrzutu 
+* Automat I jest deterministyczny i zupełny, zaś automat II nie jest ani deterministyczny ani zupełny.
 
-### Zmienności 
-==Rozstępem== w zbiorze wyników obserwacji nazywamy różnicę między największą i najmniejszą zaobserwowaną wartością. 
+* Automat II jest deterministyczny i zupełny, zaś automat I nie jest ani deterministyczny ani zupełny.
 
-==Odstępem międzykwartylowym== nazywamy różnicę między trzecim (górnym) a pierwszym (dolnym) kwartylem. 
+* Automat II jest deterministyczny, ale nie jest zupełny, zaš automat I jest zupełny, ale nie jest deterministyczny.
 
-==Wariancją== w zbiorze wyników obserwacji nazywamy przeciętne kwadratowe odchylenie poszczególnych wyników do ich średniej.
+* Obydwa automaty nie są ani deterministyczne, ani zupełne.
 
----
+* Automat I jest deterministyczny, ale nie jest zupełny, zaś automat II jest zupełny, ale nie jest deterministyczny.
 
-**Wariancja w próbie:**
-$$
-s^2=\frac{\sum_{i=1}^{n} {(x_i-\overline{x})^2}}{n-1}.
-$$
+  
 
-**Wariancja w populacji:**
-$$
-\sigma^2=\frac{\sum_{i=1}^{N} {(x_i-\mu)^2}}{N},
-$$
-gdzie $\mu$ jest średnią w populacji.
+## Dany jest automat skończony, jak na rysunku. Język akceptowany przez ten automat to:
 
---------
-### Stopnie swobody
-$Oszacowanie~wariancji= \frac{suma~kwadratów~odchyleń~od~pewnej~wartości}{liczba~stopni~swobody}$
+* język nad alfabetem T = {0, 1} będący zbiorem wszystkich łańcuchów zerojedynkowych rozpoczynających się od zera i mających nieparzystą długość lub rozpoczynających się od jedynki i mających parzystą długość
 
-```mermaid
-graph LR
-A(n to liczba obserwacji w próbie)
-C(n-1)
-B(1 'zużyty' na obliczenie średniej z próby)
-A-->C
-B-->C
-```
-$$
-s^2=\frac{\sum_{i=0}^{n} {(x_i-\overline{x})^2}}{n-1}.
-$$
+* język nad alfabetem T = {0, 1} będący zbiorem wszystkich łańcuchów zerojedynkowych niezawierających podłańcucha 110
 
----
+* język nad alfabetem T = (0, 1) będący zbiorem wszystkich łańcuchów zerojedynkowych zawierających podłańcuch 0101
 
-### Zmienności
-==Odchyleniem standardowym== w zbiorze wyników obserwacji nazywamy (dodatni) pierwiastek kwadratowy z wariancji.
+* język nad alfabetem T = {0, 1}, będący zbiorem wszystkich słów zerojedynkowych zawierających tyle samo podłańcuchów 01 co podłańcuchów 10
 
-**Odchylenie standardowe w próbie:**
-$$
-s=\sqrt{s^2}=\sqrt{\frac{\sum_{i=1}^{N} {(x_i-\overline{x})^2}}{n-1}}.
-$$
+* język nad alfabetem T = {0, 1} będący zbiorem wszystkich łańcuchów zerojedynkowych, w których na każdej nieparzystej pozycji stoi jedynka
 
-**Odchylenie standardowe w populacji:**
-$$
-\sigma=\sqrt{\sigma^2}=\sqrt{\frac{\sum_{i=1}^{N} {(x_i-\mu)^2}}{N}}
-$$
+  
+  
 
----
+## Jaka jest moc zbioru wszystkich możliwych języków nad danym skończonym alfabetem ∑ ?
 
-### Współczynnik zmienności
-Współczynnik zmienności określamy jako iloraz odchylenia
-standardowego przez średnią:
-$$
-c_v=\frac{s}{\overline{x}}
-$$
+* Zbiór wszystkich języków jest zbiorem nieskończonym i nieprzeliczalnym.
 
+* Zbiór wszystkich języków jest zbiorem nieskończonym, ale przeliczalnym.
 
+  
 
-## Grupowanie danych i histogramy
+## Wybierz prawdziwe stwierdzenie:
 
-==Histogram== jest wykresem utworzonym ze słupków o różnej wysokości. Wysokość słupka reprezentuje częstość, z jaką pojawiły się wyniki obserwacji należące do klasy reprezentowanej przez słupek. Sąsiednie słupki mają wspólne boki. 
+  
 
-==Względną częstością==, odpowiadającą danej klasie, jest liczba wyników obserwacji należących do tej klasy (liczebność klasy) podzielona przez liczbę wszystkich obserwacji.
+* Uporządkowanie standardowe jest naturalne i użyteczne dla języków mających nieskończoną liczbę słów, zaś uporządkowanie leksykograficzne jest wykorzystywane dla języków o skończonej liczbie słów (por. leksykony, słowniki, encyklopedie).
 
-### Miary tendencji centralnej dla danych zgrupowanych
+* Uporządkowanie standardowe jest naturalne i użyteczne dla języków mających skończoną liczbę słów, zaś uporządkowanie leksykograficzne jest wykorzystywane dla języków o nieskończonej liczbie słów.
 
-#### Moda (dominanta):
-$$
-D\cong x_0+l\frac{n_d-n_{d-1}}{(n_d-n_{d-1})+(n_d-n_{d+1})}
-$$
-$x_0$ – dolna granica przedziału klasowego mody
-$l$ – szerokość przedziału klasowego mody
-$n_d$ – liczebność w przedziale mody
-$n_{d-1}$ – liczebność w przedziale poprzedzającym przedział mody
-$n_{d+1}$ – liczebność w przedziale następującym po przedziale mody
+  
+  
+
+## Następujące wyrażenie regularne:
+
+  
+
+1\*|1\*(011\*)\*01\*
+
+  
+
+opisuje język nad alfabetem T = {0, 1} będący zbiorem wszystkich łańcuchów zerojedynkowych, w których:
+
+  
+
+* drugim od początku i przedostatnim symbolem jest jedynka,
+
+* liczba jedynek jest parzysta,
+
+* każda jedynka jest poprzedzona co najmniej jednym zerem i po każdej jedynce występuje co najmniej jedno zero.
+
+* każde dwa zera są przedzielone co najmniej jedną jedynką,
+
+* występują co najmniej dwie jedynki,
+
+  
+  
+
+## Język nad alfabetem T = {0, 1} będący zbiorem wszystkich łańcuchów zerojedynkowych, w których każda jedynka jest poprzedzona co najmniej jednym zerem i po każdej jedynce występuje co najmniej jedno zero, może być opisany następującym wyrażeniem regularnym:
+
+  
+
+* 11|(0|1)1(0|1)|(0|1)1(0|1)\*1(0|1)
+
+* 0\*|00\*10(0|10)\*
+
+* (1|01\*0)\*
+
+* 1\*|1\*(011\*)\*01\*
+
+  
+
+## Rozważamy dwa języki:
+
+$L_3 = \{0^n 1^n | n\geq  1\} = \{01, 0011, 000111, ...\} $
+
+$L4 = \{(01)^n | n \geq  1\} = \{01, 0101, 010101, ...\}$
+
+  
+
+Co można powiedzieć o własności przedrostkowej/przyrostkowej obu języków?
+
+  
+
+* Język $L_3$ posiada obie rozważane własności, język $L_4$ nie posiada żadnej z rozważanych własności.
+
+* Żaden z języków nie posiada żadnej z rozważanych własności.
+
+* Język $L_4$ posiada obie rozważane własności, język $L_3$ nie posiada żadnej z rozważanych własności.
+
+* Każdy z rozważanych języków posiada obie z rozważanych własności.
+
+  
+  
+
+## Rozważany jest język:
+
+  
+
+$\{a^n b^m c^m d^n | n, m > 0\}$
+
+  
+
+Która z poniższych gramatyk generuje ten język?
+
+  
+
+* S -> aSd | aAd
+
+A -> bAc | bc
+
+  
 
 ---
 
-#### Mediana:
-$$
-M_e \cong x_0 + \frac{l}{n_0}(N_{M_e}-N^*)
-$$
-$x_0$ – dolna granica przedziału klasowego mediany
-$l$ – szerokość przedziału klasowego mediany
-$n_0$ – liczebność w przedziale mediany
-$N_{M_e}$ – numer obserwacji, której wartość jest medianą
-$N^*$ – skumulowana liczba obserwacji do klasy mediany (bez klasy mediany)
+  
+
+* S -> aSd | aAd
+
+A -> bA | bB
+
+B -> cB | c
 
 ---
 
-#### Średnia pogrupowanych wyników obserwacji:
-$$
-\overline{x}=\frac{\sum_{i=1}^{k} {f_im_i}}{n}.
-$$
+* S -> AB
 
-#### Wariancja pogrupowanych wyników obserwacji:
-$$
-s^2=\frac{\sum_{i=1}^{k} {f_i(m_i)^2}-\frac{(\sum_{i=1}^{k} {f_im_i})^2}{n}}{n-1}.
-$$
+A -> aAb | ab
 
-gdzie:
-$f_i$ – liczebność i-tego przedziału klasowego,
-$m_i$ – środek i-tego przedziału klasowego
-
----
-### Skośność rozkładu
-![Skośność rozkładu](https://wszib-my.sharepoint.com/:i:/g/personal/humeniuk_student_wszib_edu_pl/EWP2e00j5i5AuQDMXXCQmSsBv8cVHk6qa5rSLptByQvImg)
-
-### Spłaszczenie rozkładu
-Miarą spłaszczenia rozkładu częstości (które przeciwstawiamy spiczas- tości) jest kurtoza.
-![Spłaszczenie rozkładu](https://wszib-my.sharepoint.com/:i:/g/personal/humeniuk_student_wszib_edu_pl/EcbWdNoQiWdNmcchAK79cMEBfKyzI9g1Qo81eh2LdBRYGQ?e=XBpsy7)
-
-
-## Związki między średnią a odchyleniem standardowym
-
-### Twierdzenie Czebyszewa
-
- Dowiedzione przez Czebyszewa twierdzenie prowadzi do następujących reguł: 
- 1. Co najmniej 3/4 wyników obserwacji odchyla się od średniej o mniej niż o 2 odchylenia standardowe. 
- 2. Co najmniej 8/9 wyników obserwacji odchyla się od średniej o mniej niż o 3 odchylenia standardowe. 
-
-	Te reguły są szczególnym przypadkiem reguły stwierdzającej, że co najmniej (1-1/k²)-ta część wyników obserwacji odchyla się od średniej o mniej niż o k odchyleń standardowych. (Zauważmy, że k nie musi być liczbą całkowitą).
-
-Reguła empiryczna Gdy rozkład wyników obserwacji ma kształt kopca, tj. gdy histogram odpowiadający da- nym jest dosyć symetryczny i jednomodalny, znajdują zastosowanie dokładniejsze reguły: 1. Około 68% wyników obserwacji odchyla się od średniej nie więcej niż o 1 odchylenie standardowe. 2. Około 95% wyników obserwacji odchyla się od średniej nie więcej niż o 2 odchylenia standardowe. 3. Ogromna większość wyników obserwacji (wszystkie lub prawie wszystkie) odchyla się od średniej nie więcej niż o 3 odchylenia standardowe
+B -> cBd | cd
 
 ---
 
-### Reguła empiryczna 
+* S -> aS | aA
 
-Gdy rozkład wyników obserwacji ma kształt kopca, tj. gdy histogram odpowiadający da- nym jest dosyć symetryczny i jednomodalny, znajdują zastosowanie dokładniejsze reguły: 
-1. Około 68% wyników obserwacji odchyla się od średniej nie więcej niż o 1 odchylenie standardowe. 
-2. Około 95% wyników obserwacji odchyla się od średniej nie więcej niż o 2 odchylenia standardowe. 
-3. Ogromna większość wyników obserwacji (wszystkie lub prawie wszystkie) odchyla się od średniej nie więcej niż o 3 odchylenia standardowe
+A -> bA | bB
 
-# Prawdopodobieństwo całkowite
+B -> cB | cC
 
-## Użyteczne wzory związane z prawdopodobieństwem całkowitym:
-### Przypadek dwuczłonowego podziału zbioru $B$:
-$$
-P(A)=P(A|B)P(B)+P(A|\overline{B})P(\overline{B}).
-$$
-### Przypadek n-członowego podziału zbioru $B$ na zbiory $B_1,...,B_n$:
-$$
-P(A)=\sum_{i=1}^{n} {P(A|B_i)P(B_i)}.
-$$
+C -> dC | d
 
-## Twierdzenie Bayesa
-### Twierdzenie Bayesa:
-$$
-P(B|A)=\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\overline{B})P(\overline{B})}.
-$$
-### Uogólnione twierdzenie Bayesa:
-$$
-P(B_1|A)=\frac{P(A|B_1)P(B_1)}{\sum_{i=1}^{n} {P(A|B_i)P(B_i)}}
-$$
+  
 
-# Dyskretne zmienne losowe
-## Skokowe (dyskretne) zmienne losowe
-* ==Zmienną losową== jest zmienna, która przyjmuje różne wartości liczbowe, wyznaczone przez los. 
+## Niech $L$ będzie językiem. Czy prawdziwe są następujące formuły?
 
-* Zmienna losowa jest ==skokowa (dyskretna)==, gdy może przyjmować wartości ze zbioru najwyżej przeliczalnego. 
-* Zmienna losowa ==ciągła== może przyjmować wartości z dowolnego przedziału liczbowego. Możliwe wartości takiej zmiennej tworzą zbiór nieprzeliczalnie nieskończony.
-### Rozkład prawdopodobieństwa skokowej zmiennej losowej
+  
 
-Rozkład prawdopodobieństwa skokowej zmiennej losowej X spełnia następujące warunki:
-$$
-P(x) ≥0~dla~wszystkich~wartości~x.
-$$
-$$
-\sum_{wszystkie~x}^{} {P(x)}=1.
-$$
+Formuła 1: $L^+ = L^* - \{\epsilon\}$
 
-### Dystrybuanta skokowej zmiennej losowej
+  
 
-==Skumulowaną funkcją rozkładu (dystrybuanta)== skokowej zmiennej losowej X jest funkcja:
-$$
-F(x)=P(X \leq x) = \sum_{wszystkie~i\leq x}^{} {P(i)}.
-$$
+Formuła 2: $L^* = L^+ \cup \{\epsilon\}$
 
-### Wartość oczekiwana skokowej zmiennej losowej
+  
 
-==Oczekiwana wartość== skokowej zmiennej losowej X jest równa sumie wszystkich możliwych wartości tej zmiennej mnożonych przez ich praw- dopodobieństwa:
-$$
-\mu=E(X)=\sum_{wszystkie~x}^{} {xP(x)}.
-$$
+* Formuła 2 jest prawdziwa, zaś Formula 1 jest błędna
 
+* Formula 1 jest prawdziwa, zaś Formuła 2 jest błędna
 
+* Obie formuły są błędne
+
+* Obie formuły są prawdziwe
+
+  
+
+## Niech $L_1$ i $L_2$ będą językami nad alfabetem $\{a\}$, przy czym:
+
+  
+
+$L_1 = \{a^n | n-jest~naturalną~liczbą~parzystą\} = \{aa, aaaa, aaaaaa,...\}$
+
+  
+
+$L_2 = \{a^n|n-jest~naturalną~liczbą~nieparzystą \} = \{a, aaa, aaaaa,... \}$
+
+  
+
+Czy prawdziwe są następujące formuły?
+
+  
+
+1. Formuła 1: $L_1^* = L_2^*$
+
+  
+
+2. Formuła 2: $L_1^* \subseteq L_2^*$
+
+  
+
+3. Formuła 3: $L_1^* \supseteq L_2^*$
+
+  
+
+* Wszystkie formuły są błędne
+
+  
+
+* Wszystkie formuły są prawdziwe
+
+  
+
+* Tylko Formuła 3 jest prawdziwa
+
+  
+
+* Tylko Formuła 2 jest prawdziwa
+
+  
+  
+
+## Wybierz prawdziwe stwierdzenia:
+
+  
+
+* Język uniwersalny jest przykładem języka rozpoznawalnego, ale nie rozstrzygalnego.
+
+  
+
+* Teza Churcha - Turinga mówi, że każdy efektywnie rozwiązywalny (obliczalny) problem algorytmiczny jest rozwiązywalny przez maszynę Turinga.
+
+  
+
+* Język przekątniowy (język diagonalizacji) jest rozpoznawany przez pewną maszynę Turinga.
+
+  
+
+* Problem stopu jest przykładem problemu nierozwiązywalnego.
+
+  
+  
+
+## Język nad alfabetem T = {0, 1} będący zbiorem wszystkich łańcuchów zerojedynkowych, w których każde dwa zera przedzielone są co najmniej jedną jedynką, może być opisany następującym wyrażeniem regularnym:
+
+  
+
+(1|01\*0)(1|01\*0)\*
+
+  
+
+(1|01\*0)\*
+
+  
+
+11|(0|1)1(0|1)|(0|1)1(0|1)\*1(0|1)
+
+  
+
+1\*|1\*(011\*)\*01\*
+
+  
+
+## Które z poniższych stwierdzeń są prawdziwe?
+
+  
+
+* Zastąpienie niedeterministycznej maszyny Turinga symulującą ją maszyną deterministyczną nie zostaje okupione żadnym wzrostem złożoności obliczeń.
+
+* Deterministyczny automat ze stosem może charakteryzować się liniowym czasem obliczeń ze względu na długość analizowanego wejścia (choć nie można powiedzieć, że wykonuje dokładnie jeden krok na jeden symbol wejściowy, jak to ma miejsce w przypadku deterministycznego automatu skończonego).
+
+* Deterministyczny automat skończony charakteryzuje się liniowym czasem obliczeń ze względu na długość analizowanego wejścia (wykonuje dokładnie jeden krok na jeden symbol wejściowy).
+
+* Zastąpienie niedeterministycznego automatu skończonego równoważnym mu deterministycznym automatem skończonym nie zostaje okupione żadnym wzrostem czasowej złożoności obliczeń.
